@@ -6,7 +6,7 @@ metadata:
     visualize: "true"
   name: website
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,6 +17,6 @@ spec:
         visualize: "true"
     spec:
       containers:
-      - image: plantshop/website:latest
+      - image: kubecloud/demo-itonk-grp3-website:v1
         name: website
   minReadySeconds: 120

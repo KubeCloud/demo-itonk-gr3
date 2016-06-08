@@ -6,7 +6,7 @@ metadata:
     visualize: "true"
   name: web-service
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,6 +17,6 @@ spec:
         visualize: "true"
     spec:
       containers:
-      - image: plantshop/webservice:latest
+      - image: kubecloud/demo-itonk-grp3-web-service:v1
         name: web-service
   minReadySeconds: 120

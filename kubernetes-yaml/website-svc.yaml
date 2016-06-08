@@ -9,9 +9,9 @@ metadata:
   name: website
 spec:
   ports:
-  - port: 9008 # Exposed port on cluster
+  - port: 8080 # Exposed port on cluster
     protocol: TCP
-    targetPort: 9008 # Internal service port
+    targetPort: 8080 # Internal service port
   selector:
     app: website
     tier: frontend

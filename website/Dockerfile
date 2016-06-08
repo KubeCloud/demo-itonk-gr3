@@ -14,6 +14,6 @@ RUN npm install --production
 COPY dist/ /usr/src/app/dist/
 COPY server.js /usr/src/app/
 
-EXPOSE 9008
+EXPOSE 8080
 
 CMD ["node", "server.js"]

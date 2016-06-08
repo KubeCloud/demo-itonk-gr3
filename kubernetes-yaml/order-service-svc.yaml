@@ -9,9 +9,9 @@ metadata:
   name: order-service
 spec:
   ports:
-  - port: 9004
+  - port: 8080
     protocol: TCP
-    targetPort: 9004
+    targetPort: 8080
   selector:
     app: order-service
     tier: backend

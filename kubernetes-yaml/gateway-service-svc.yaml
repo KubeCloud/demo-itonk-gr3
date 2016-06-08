@@ -9,11 +9,11 @@ metadata:
   name: gateway-ui
 spec:
   externalIPs:
-  - 192.168.1.31
+  - 192.168.1.71
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
     app: gateway-ui
     tier: frontend
