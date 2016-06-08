@@ -1,0 +1,63 @@
+<section ng-if="!order.confirmed">
+    <h1>Place order</h1>
+    <p>Fill in your details and your plants will be on their way ASAP!</p>
+
+    <form class="form-horizontal" name="orderForm" ng-submit="order.placeOrder()">
+        <div class="form-group" ng-class="{'has-error': orderForm.name.$invalid && orderForm.name.$touched}">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input id="name"
+                       class="form-control"
+                       type="text"
+                       name="name"
+                       ng-model="order.details.customer.name"
+                       required>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': orderForm.address.$invalid && orderForm.address.$touched}">
+            <label for="address" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+                <input id="address"
+                       class="form-control"
+                       type="text"
+                       name="address"
+                       ng-model="order.details.customer.address"
+                       ng-required="true">
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': orderForm.country.$invalid && orderForm.country.$touched}">
+            <label for="country" class="col-sm-2 control-label">Country</label>
+            <div class="col-sm-10">
+                <input id="country"
+                       class="form-control"
+                       type="text"
+                       name="country"
+                       ng-model="order.details.customer.country"
+                       ng-required="true">
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': orderForm.email.$invalid && orderForm.email.$touched}">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input id="email"
+                       class="form-control"
+                       type="email"
+                       name="email"
+                       ng-model="order.details.customer.email"
+                       ng-required="true">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Order</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<section ng-if="order.confirmed">
+    <div class="well">
+        <h1 class="text-success"><span class="glyphicon glyphicon-send"></span> We got your order</h1>
+        <p>Your stuff will be delivered by paper airplane right away.</p>
+    </div>
+</section>

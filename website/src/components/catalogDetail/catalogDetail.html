@@ -1,0 +1,6 @@
+<h1>{{cat.catalog.name}}</h1>
+
+<div ng-repeat="product in cat.catalog.products track by $index">
+    <a ui-sref="productDetail({id: product.id})">{{product.name}}</a>
+</div>
+

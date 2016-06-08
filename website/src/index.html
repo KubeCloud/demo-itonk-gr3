@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="da" ng-app="app" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="fragment" content="!" />
+    <title>ONK Project</title>
+    <meta name="description" content="Awesome E-commerce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">Your browser is <strong>outdated</strong>. <a href="http://browsehappy.com/">Update your browser</a> to ensure a good experience.</p>
+    <![endif]-->
+    <noscript>
+        <div class="jumbotron text-center">
+            <p class="text-danger  bg-danger">Your browser has deactivated JavaScript. This is necessary to view the page.</p>
+        </div>
+    </noscript>
+
+    <ps-loader></ps-loader>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <ps-navigation></ps-navigation>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <ps-catalogs></ps-catalogs>
+            </div>
+            <div class="col-xs-5">
+                <main ui-view></main>
+            </div>
+            <div class="col-xs-4">
+                <ps-cart></ps-cart>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/vendors.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

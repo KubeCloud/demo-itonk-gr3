@@ -1,0 +1,88 @@
+configuration:
+  projectName: gateway-ui
+server:
+  port: 80
+zuul:
+  routes:
+    product:
+      url: http://product-service:9000
+      path: /product/**
+      stripPrefix: false
+    supplier:
+      url: http://supplier-service:9001
+      path: /supplier/**
+      stripPrefix: false
+    customer:
+      url: http://customer-service:9002
+      path: /customer/**
+      stripPrefix: false
+    storage:
+      url: http://storage-service:9003
+      path: /storage/**
+      stripPrefix: false
+    order:
+      url: http://order-service:9004
+      path: /order/**
+      stripPrefix: false
+    web:
+      url: http://web-service:9005
+      path: /web/**
+      stripPrefix: false
+    support:
+      url: http://support-service:9006
+      path: /support/**
+      stripPrefix: false
+    dispatch:
+      url: http://dispatch-service:9007
+      path: /dispatch/**
+      stripPrefix: false
+    default:
+      url: http://website:9008
+      path: /**
+      stripPrefix: false
+---
+spring:
+  profiles: development
+server:
+  port: 8080
+zuul:
+  routes:
+    product:
+      url: http://localhost:9000
+      path: /product/**
+      stripPrefix: false
+    supplier:
+      url: http://localhost:9001
+      path: /supplier/**
+      stripPrefix: false
+    customer:
+      url: http://localhost:9002
+      path: /customer/**
+      stripPrefix: false
+    storage:
+      url: http://localhost:9003
+      path: /storage/**
+      stripPrefix: false
+    order:
+      url: http://localhost:9004
+      path: /order/**
+      stripPrefix: false
+    web:
+      url: http://localhost:9005
+      path: /web/**
+      stripPrefix: false
+    support:
+      url: http://localhost:9006
+      path: /support/**
+      stripPrefix: false
+    dispatch:
+      url: http://localhost:9007
+      path: /dispatch/**
+      stripPrefix: false
+    default:
+      url: http://localhost:9008
+      path: /
+      stripPrefix: false
+
+debug: true
+

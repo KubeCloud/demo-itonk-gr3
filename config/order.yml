@@ -1,0 +1,14 @@
+configuration:
+  projectName: order
+server:
+  port: 9004
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+---
+spring:
+  profiles: development
+server:
+  port: 9004

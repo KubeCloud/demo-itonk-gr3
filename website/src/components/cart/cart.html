@@ -1,0 +1,9 @@
+<div>
+    <button class="btn btn-success pull-right" ng-click="cart.checkout()" ng-hide="cart.items.length==0">Confirm Purchase</button>
+
+    <h1>Cart</h1>
+
+    <div ng-repeat="c in cart.items">
+        <p>{{c.name}} | {{c.price}},-</p>
+    </div>
+</div>

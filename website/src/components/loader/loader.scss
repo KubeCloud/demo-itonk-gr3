@@ -1,0 +1,13 @@
+.loading-page {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-size: 10vh;
+  background-color: white;
+  opacity: 0.5;
+  height: 100vh;
+  padding-top: 45vh;
+  padding-left: 45vw;
+  width: 100%;
+  z-index: 1000;
+}

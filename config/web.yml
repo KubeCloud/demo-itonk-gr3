@@ -1,0 +1,14 @@
+configuration:
+  projectName: web
+server:
+  port: 9005
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+---
+spring:
+  profiles: development
+server:
+  port: 9005
