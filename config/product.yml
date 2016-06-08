@@ -1,7 +1,7 @@
 configuration:
   projectName: product
 server:
-  port: 9000
+  port: 8080
 logging:
   level:
     org:
