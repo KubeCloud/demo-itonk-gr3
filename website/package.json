@@ -17,7 +17,7 @@
     }
   ],
   "scripts": {
-    "start": "reload -d dist/ -p 9008",
+    "start": "reload -d dist/ -p 8080",
     "postinstall": "bower install && typings install"
   },
   "dependencies": {
