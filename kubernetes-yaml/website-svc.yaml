@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: website
+    tier: frontend
+    run: website
+    visualize: "true"
+  name: website
+spec:
+  ports:
+  - port: 9008 # Exposed port on cluster
+    protocol: TCP
+    targetPort: 9008 # Internal service port
+  selector:
+    app: website
+    tier: frontend

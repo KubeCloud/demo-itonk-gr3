@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gateway-ui
+    tier: frontend
+    run: gateway-ui
+    visualize: "true"
+  name: gateway-ui
+spec:
+  externalIPs:
+  - 192.168.1.31
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: gateway-ui
+    tier: frontend

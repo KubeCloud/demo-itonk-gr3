@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: web-service
+    visualize: "true"
+  name: web-service
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: web-service
+        tier: backend
+        track: stable
+        run: web-service
+        visualize: "true"
+    spec:
+      containers:
+      - image: plantshop/webservice:latest
+        name: web-service
+  minReadySeconds: 120

@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: gateway-ui
+    visualize: "true"
+  name: gateway-ui
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: gateway-ui
+        tier: frontend
+        track: stable
+        run: gateway-ui
+        visualize: "true"
+    spec:
+      containers:
+      - image: plantshop/gatewayservice:latest
+        name: gateway-ui

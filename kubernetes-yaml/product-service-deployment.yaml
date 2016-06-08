@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: product-service
+    visualize: "true"
+  name: product-service
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: product-service
+        tier: backend
+        track: stable
+        run: product-service
+        visualize: "true"
+    spec:
+      containers:
+      - image: plantshop/productservice:latest
+        name: product-service
+  minReadySeconds: 120

@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: website
+    visualize: "true"
+  name: website
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: website
+        tier: frontend
+        track: stable
+        run: website
+        visualize: "true"
+    spec:
+      containers:
+      - image: plantshop/website:latest
+        name: website
+  minReadySeconds: 120

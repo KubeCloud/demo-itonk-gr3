@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: config-service
+    visualize: "true"
+  name: config-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: config-service
+        tier: backend
+        track: stable
+        run: config-service
+        visualize: "true"
+    spec:
+      containers:
+      - image: plantshop/configservice:2.0
+        name: config-service
+  minReadySeconds: 120
