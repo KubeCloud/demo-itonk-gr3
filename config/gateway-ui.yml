@@ -17,7 +17,7 @@ zuul:
       path: /web/**
       stripPrefix: false
     default:
-      url: http://website:9008
+      url: http://website:8080
       path: /**
       stripPrefix: false
 ---
