@@ -1,7 +1,7 @@
 configuration:
   projectName: web
 server:
-  port: 9005
+  port: 8080
 logging:
   level:
     org:
