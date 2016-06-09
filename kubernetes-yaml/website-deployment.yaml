@@ -6,7 +6,7 @@ metadata:
     visualize: "true"
   name: website
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
