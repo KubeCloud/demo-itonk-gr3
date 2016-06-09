@@ -1,3 +1,8 @@
+#Setup kubectl to the correct cluster
+kubectl config set-cluster cluster71 --server=http://192.168.1.71:8080
+kubectl config set-context cluster71 --cluster=cluster71
+kubectl config use-context cluster71
+
 # create Config-server
 kubectl create -f kubernetes-yaml/config-service-deployment.yaml
 kubectl create -f kubernetes-yaml/config-service-svc.yaml
